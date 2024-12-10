@@ -70,4 +70,6 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.retrofit.gson.convertor)
 
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+
 }
