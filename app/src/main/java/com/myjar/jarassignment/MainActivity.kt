@@ -1,6 +1,7 @@
 package com.myjar.jarassignment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -10,6 +11,7 @@ import com.myjar.jarassignment.databinding.ActivityMainBinding
 import com.myjar.jarassignment.ui.adapter.RecyclerAdapter
 import com.myjar.jarassignment.ui.vm.JarViewModel
 import kotlinx.coroutines.launch
+import kotlin.math.log
 
 class MainActivity : ComponentActivity() {
 
@@ -25,6 +27,7 @@ class MainActivity : ComponentActivity() {
 
         lifecycleScope.launch {
             viewModel.listStringData.collect{ items ->
+                Log.d("values" , "msg ->" + items)
                 binding.recyclerView.adapter = RecyclerAdapter(items)
             }
         }

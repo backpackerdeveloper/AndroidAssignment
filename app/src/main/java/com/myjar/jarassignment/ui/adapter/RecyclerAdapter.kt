@@ -10,7 +10,6 @@ import com.myjar.jarassignment.data.model.ComputerItem
 
 class RecyclerAdapter(private val items: List<ComputerItem> ) : RecyclerView.Adapter<RecyclerAdapter.JarViewModel>() {
     class JarViewModel(view: View) : RecyclerView.ViewHolder(view) {
-
         val name: TextView = view.findViewById(R.id.name)
         val color: TextView = view.findViewById(R.id.color)
         val capacity: TextView = view.findViewById(R.id.capacity)
